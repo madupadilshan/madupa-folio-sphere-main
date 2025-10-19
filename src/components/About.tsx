@@ -16,7 +16,7 @@ const expertise = [
   },
   {
     icon: Zap,
-    text: "Designing and consuming RESTful APIs for seamless data communication",
+    text: "Foundational knowledge in DevOps practices, including CI/CD pipelines for MERN applications",
   },
   {
     icon: Shield,
@@ -35,7 +35,7 @@ const About = () => {
             I am a motivated third-year Network Technology student at the University of
             Sri Jayewardenepura, passionate about building modern web applications.
             While my studies focus on Network Technology and Cybersecurity, I have over
-            a year of hands-on experience developing full-stack solutions.
+            a year of hands-on experience developing MERN-stack solutions.
           </p>
 
           {/* Expertise Grid */}

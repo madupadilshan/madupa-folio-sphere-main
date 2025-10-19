@@ -4,7 +4,7 @@ import { getAssetPath } from "@/lib/assets";
 
 const roles = [
   "Cloud & DevOps Enthusiast",
-  "Full-Stack Developer",
+  "MERN-Stack Developer",
   "Network Technologist",
 ];
 
@@ -121,9 +121,8 @@ const Hero = () => {
 
               {/* Description */}
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                A passionate full-stack developer with a strong foundation in Network
-                Technology and Cybersecurity, specializing in creating secure and scalable
-                modern web applications.
+                A developer with foundational skills in MERN Stack and Networking, currently 
+                advancing into DevOps, AWS, and Cybersecurity. Proven experience with CI/CD pipelines for MERN projects.
               </p>
 
               {/* CTA Buttons */}
