@@ -15,5 +15,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/madupa-folio-sphere-main/", // GitHub Pages base path
+  base: "/", // Root path for custom domain
 }));
