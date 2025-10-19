@@ -1,4 +1,5 @@
 import { ExternalLink, Github } from "lucide-react";
+import { getAssetPath } from "@/lib/assets";
 
 const projects = [
   {
@@ -9,7 +10,7 @@ const projects = [
     tags: ["HTML5", "CSS3", "JavaScript"],
     liveUrl: "https://madupadilshan.github.io/portfolio/",
     githubUrl: "https://github.com/madupadilshan/portfolio",
-    image: "/projects/portfolio.jpg",
+    image: getAssetPath("/projects/portfolio.jpg"),
   },
   {
     category: "AI/ML",
@@ -19,7 +20,7 @@ const projects = [
     tags: ["MERN", "Python", "AI/ML"],
     liveUrl: "https://recruitmentapp.live/",
     githubUrl: "https://github.com/madupadilshan/recruitment-ai-system",
-    image: "/projects/recruitment-system.png",
+    image: getAssetPath("/projects/recruitment-system.png"),
   },
   {
     category: "E-Commerce",
@@ -29,7 +30,7 @@ const projects = [
     tags: ["React", "Node.js", "MongoDB"],
     liveUrl: "https://madupadilshan.github.io/ecommerce-store",
     githubUrl: "https://github.com/madupadilshan/ecommerce-store",
-    image: "/projects/online-store.jpg",
+    image: getAssetPath("/projects/online-store.jpg"),
   },
   {
     category: "Content Platform",
@@ -39,7 +40,7 @@ const projects = [
     tags: ["MERN", "RESTful API"],
     liveUrl: "https://blogfrontend-nu.vercel.app/",
     githubUrl: "https://github.com/madupadilshan/blogApp",
-    image: "/projects/blog.jpg",
+    image: getAssetPath("/projects/blog.jpg"),
   },
 ];
 

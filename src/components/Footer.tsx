@@ -1,4 +1,5 @@
-import { Mail, Phone, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import { getAssetPath } from "@/lib/assets";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -49,7 +50,7 @@ const Footer = () => {
                   Contact
                 </a>
                 <a
-                  href="/Madupa_Dilshan_CV.pdf"
+                  href={getAssetPath("/Madupa_Dilshan_CV.pdf")}
                   download="Madupa_Dilshan_CV.pdf"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >

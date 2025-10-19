@@ -1,4 +1,5 @@
-import { Code2, Network, Cloud, Shield, Database, Zap, Download } from "lucide-react";
+import { Building2, GraduationCap, Download, Code2, Network, Cloud, Zap, Shield } from "lucide-react";
+import { getAssetPath } from "@/lib/assets";
 
 const expertise = [
   {
@@ -61,7 +62,7 @@ const About = () => {
           {/* CV Download Button */}
           <div className="flex justify-center pt-4">
             <a
-              href="/Madupa_Dilshan_CV.pdf"
+              href={getAssetPath("/Madupa_Dilshan_CV.pdf")}
               download="Madupa_Dilshan_CV.pdf"
               className="btn-hero-primary inline-flex items-center gap-2"
             >

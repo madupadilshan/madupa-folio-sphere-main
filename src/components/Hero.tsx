@@ -1,5 +1,6 @@
 import { Download, Mail, Github, Linkedin, Twitter } from "lucide-react";
 import Typewriter from "typewriter-effect";
+import { getAssetPath } from "@/lib/assets";
 
 const roles = [
   "Cloud & DevOps Enthusiast",
@@ -40,7 +41,7 @@ const Hero = () => {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 blur-2xl animate-pulse"></div>
                 <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl shadow-primary/30 hover:scale-105 transition-transform duration-500">
                   <img
-                    src="/pho.jpg"
+                    src={getAssetPath("/pho.jpg")}
                     alt="Madupa Dilshan"
                     className="w-full h-full object-cover object-center"
                   />
@@ -50,7 +51,7 @@ const Hero = () => {
                 <div className="absolute -right-6 -top-6 w-20 h-20 animate-float">
                   <div className="relative w-full h-full bg-card backdrop-blur-sm rounded-full border-2 border-primary/50 p-2 shadow-xl hover:scale-110 transition-transform cursor-pointer group">
                     <img
-                      src="/certificates/aws-educate-introduction-to-cloud-101-training-badg.png"
+                      src={getAssetPath("/certificates/aws-educate-introduction-to-cloud-101-training-badg.png")}
                       alt="AWS Cloud Computing 101"
                       className="w-full h-full object-contain"
                     />
@@ -64,7 +65,7 @@ const Hero = () => {
                 <div className="absolute -left-6 top-1/3 w-20 h-20 animate-float" style={{ animationDelay: '0.5s' }}>
                   <div className="relative w-full h-full bg-card backdrop-blur-sm rounded-full border-2 border-primary/50 p-2 shadow-xl hover:scale-110 transition-transform cursor-pointer group">
                     <img
-                      src="/certificates/aws-knowledge-cloud-essentials-training-badge.png"
+                      src={getAssetPath("/certificates/aws-knowledge-cloud-essentials-training-badge.png")}
                       alt="AWS Cloud Essentials"
                       className="w-full h-full object-contain"
                     />
@@ -78,7 +79,7 @@ const Hero = () => {
                 <div className="absolute -right-4 -bottom-4 w-20 h-20 animate-float" style={{ animationDelay: '1s' }}>
                   <div className="relative w-full h-full bg-card backdrop-blur-sm rounded-full border-2 border-primary/50 p-2 shadow-xl hover:scale-110 transition-transform cursor-pointer group">
                     <img
-                      src="/certificates/aviatrix-ace-associate-badge.png"
+                      src={getAssetPath("/certificates/aviatrix-ace-associate-badge.png")}
                       alt="Aviatrix ACE"
                       className="w-full h-full object-contain"
                     />
@@ -128,7 +129,7 @@ const Hero = () => {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 md:justify-start justify-center items-center pt-4">
                 <a
-                  href="/Madupa_Dilshan_CV.pdf"
+                  href={getAssetPath("/Madupa_Dilshan_CV.pdf")}
                   download="Madupa_Dilshan_CV.pdf"
                   className="btn-hero-primary inline-flex items-center gap-2"
                 >

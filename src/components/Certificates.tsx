@@ -1,4 +1,5 @@
 import { Award, ExternalLink, Calendar } from "lucide-react";
+import { getAssetPath } from "@/lib/assets";
 
 const certificates = [
   {
@@ -6,7 +7,7 @@ const certificates = [
     title: "AWS Technical Essentials",
     provider: "AWS Training & Certification",
     description: "Fundamental technical knowledge of AWS cloud services.",
-    image: "/certificates/aws-tech-essentials.jpg",
+    image: getAssetPath("/certificates/aws-tech-essentials.jpg"),
     verifyUrl: "https://www.linkedin.com/in/madupa-dilshan-3226711b1/details/certifications/1759950011496/single-media-viewer/?type=DOCUMENT&profileId=ACoAADFl14oBIuQM9mB3sfNx3NhWGNBtfzLbDWE",
   },
   {
@@ -15,7 +16,7 @@ const certificates = [
     provider: "KodeKloud",
     description: "Hands-on experience with Docker containers, images, and architecture.",
     id: "7caf2302-de97-440f-b2b6-58edb98e8341",
-    image: "/certificates/Docker Training Course for the Absolute Beginner_page-0001.jpg",
+    image: getAssetPath("/certificates/Docker Training Course for the Absolute Beginner_page-0001.jpg"),
     verifyUrl: "https://learn.kodekloud.com/certificate/7caf2302-de97-440f-b2b6-58edb98e8341",
   },
   {
@@ -24,7 +25,7 @@ const certificates = [
     provider: "KodeKloud",
     description: "Fundamental Linux command-line skills with practical lab exercises.",
     id: "385961a8-1c62-4ef9-a834-1b651c88cbdb",
-    image: "/certificates/Linux for beginners with Hands-on Labs_page-0001.jpg",
+    image: getAssetPath("/certificates/Linux for beginners with Hands-on Labs_page-0001.jpg"),
     verifyUrl: "https://learn.kodekloud.com/certificate/385961a8-1c62-4ef9-a834-1b651c88cbdb",
   },
   {
@@ -32,7 +33,7 @@ const certificates = [
     title: "AWS Cloud Practitioner Essentials",
     provider: "AWS Training & Certification",
     description: "Foundational understanding of the AWS Cloud and its core services.",
-    image: "/certificates/AWS Cloud PractitionerEssentials_page-0001.jpg",
+    image: getAssetPath("/certificates/AWS Cloud PractitionerEssentials_page-0001.jpg"),
     verifyUrl: "https://www.linkedin.com/in/madupa-dilshan-3226711b1/details/certifications/1748155215715/single-media-viewer/?type=DOCUMENT&profileId=ACoAADFl14oBIuQM9mB3sfNx3NhWGNBtfzLbDWE",
   },
   {
@@ -40,7 +41,7 @@ const certificates = [
     title: "Build Website With AI",
     provider: "Simplilearn SkillUP",
     description: "Leveraging AI tools and platforms for rapid website development.",
-    image: "/certificates/Build Website With AI_page-0001.jpg",
+    image: getAssetPath("/certificates/Build Website With AI_page-0001.jpg"),
     verifyUrl: "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI0ODcyIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODM4NzA2N182NjUyNTkxMTc0ODE3Mzk3NDcxOS5wbmciLCJ1c2VybmFtZSI6Ik1hZHVwYSBEaWxzaGFuIn0%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion",
   },
   {
@@ -49,7 +50,7 @@ const certificates = [
     provider: "AWS Educate",
     description: "Introduction to the basics of cloud computing technology.",
     type: "Digital Badge",
-    image: "/certificates/aws-educate-introduction-to-cloud-101-training-badg.png",
+    image: getAssetPath("/certificates/aws-educate-introduction-to-cloud-101-training-badg.png"),
     verifyUrl: "https://www.credly.com/badges/023400c8-a46e-4c75-ad87-4912308d600c/public_url",
   },
   {
@@ -58,7 +59,7 @@ const certificates = [
     provider: "AWS Educate",
     description: "Essential knowledge of cloud computing fundamentals.",
     type: "Digital Badge",
-    image: "/certificates/aws-knowledge-cloud-essentials-training-badge.png",
+    image: getAssetPath("/certificates/aws-knowledge-cloud-essentials-training-badge.png"),
     verifyUrl: "https://www.credly.com/badges/413623d2-ce99-4f9e-b757-20211c26fa36/public_url",
   },
   {
@@ -68,7 +69,7 @@ const certificates = [
     description: "Industry's first multicloud networking certification covering AWS, Azure, Google Cloud, and Oracle Cloud Infrastructure.",
     aceId: "2025-28708",
     validUntil: "Oct 17, 2028",
-    image: "/certificates/aviatrix-ace-multicloud-network-associate.jpg",
+    image: getAssetPath("/certificates/aviatrix-ace-multicloud-network-associate.jpg"),
     verifyUrl: "https://www.credly.com/badges/b386ee6f-2b1f-4eb7-a5fb-3ddf683e5d72/public_url",
   },
 ];
