@@ -15,5 +15,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/portfolio/", // GitHub Pages base path
+  base: "/madupa-folio-sphere-main/", // GitHub Pages base path
 }));
