@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Dark Navy Background Theme */
+    --background: 220 26% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Vibrant Cyan/Blue Primary */
+    --primary: 195 100% 50%;
+    --primary-foreground: 220 26% 8%;
+
+    /* Darker Card Variants */
+    --secondary: 220 18% 16%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 15% 20%;
+    --muted-foreground: 215 16% 65%;
+
+    --accent: 195 100% 50%;
+    --accent-foreground: 220 26% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 195 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(220 26% 8%) 0%, hsl(220 30% 15%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(195 100% 50%) 0%, hsl(210 100% 60%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220 20% 12%) 0%, hsl(220 18% 14%) 100%);
+    
+    /* Shadows & Effects */
+    --shadow-card: 0 4px 24px -1px hsl(195 100% 50% / 0.1);
+    --shadow-hover: 0 8px 32px -1px hsl(195 100% 50% / 0.2);
+    --glow-primary: 0 0 24px hsl(195 100% 50% / 0.3);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Light Mode Overrides */
+  body.light {
+    /* Light mode specific gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(210 40% 98%) 0%, hsl(210 40% 96%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
+    
+    /* Light mode shadows */
+    --shadow-card: 0 4px 24px -1px hsl(222 47% 11% / 0.08);
+    --shadow-hover: 0 8px 32px -1px hsl(195 100% 39% / 0.15);
+    --glow-primary: 0 0 24px hsl(195 100% 39% / 0.2);
+  }
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background: hsl(var(--background));
+  }
+}
+
+@layer components {
+  /* Hero Button Variants */
+  .btn-hero-primary {
+    @apply bg-primary text-primary-foreground px-8 py-3 rounded-full font-semibold;
+    @apply transition-all duration-300 hover:shadow-[var(--shadow-hover)];
+    @apply hover:scale-105 active:scale-95;
+  }
+  
+  .btn-hero-secondary {
+    @apply border-2 border-primary text-primary px-8 py-3 rounded-full font-semibold;
+    @apply transition-all duration-300 hover:bg-primary hover:text-primary-foreground;
+    @apply hover:scale-105 active:scale-95;
+  }
+
+  /* Card Styles */
+  .card-portfolio {
+    @apply bg-card rounded-xl p-6 border border-border;
+    @apply transition-all duration-300;
+    box-shadow: var(--shadow-card);
+  }
+  
+  .card-portfolio:hover {
+    @apply border-primary/50 -translate-y-1;
+    box-shadow: var(--shadow-hover);
+  }
+
+  /* Section Styles */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20;
+  }
+  
+  .section-heading {
+    @apply text-4xl md:text-5xl font-bold text-center mb-4;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .section-subtitle {
+    @apply text-muted-foreground text-center mb-12 text-lg;
+  }
+
+  /* Input Styles */
+  .input-portfolio {
+    @apply w-full bg-secondary border border-border rounded-lg px-4 py-3;
+    @apply text-foreground placeholder:text-muted-foreground;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary transition-all;
+  }
+  
+  .textarea-portfolio {
+    @apply w-full bg-secondary border border-border rounded-lg px-4 py-3;
+    @apply text-foreground placeholder:text-muted-foreground resize-none;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary transition-all;
+  }
+
+  /* Animations */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
