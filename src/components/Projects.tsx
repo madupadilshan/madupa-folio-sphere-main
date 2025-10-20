@@ -3,6 +3,16 @@ import { getAssetPath } from "@/lib/assets";
 
 const projects = [
   {
+    category: "DevOps/Cloud",
+    title: "Automated CI/CD Pipeline on AWS",
+    description:
+      "Fully automated CI/CD pipeline with Jenkins, Docker, and AWS EC2. Git push triggers automatic container build and deployment via GitHub webhooks.",
+    tags: ["AWS", "Jenkins", "Docker", "CI/CD"],
+    liveUrl: "", // No live demo
+    githubUrl: "https://github.com/madupadilshan/cicd-project",
+    image: getAssetPath("/projects/cicd-pipeline.jpg"),
+  },
+  {
     category: "Web Design",
     title: "Personal Portfolio Website",
     description:
