@@ -10,7 +10,7 @@ const projects = [
     tags: ["AWS", "Jenkins", "Docker", "CI/CD"],
     liveUrl: "", // No live demo
     githubUrl: "https://github.com/madupadilshan/cicd-project",
-    image: getAssetPath("/projects/cicd-pipeline.jpg"),
+    image: getAssetPath("/projects/cicd-pipeline.svg"),
   },
   {
     category: "Web Design",
