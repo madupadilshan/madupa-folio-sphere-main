@@ -7,12 +7,14 @@
 ඔබේ CI/CD project එකෙන් screenshot එකක් capture කරන්න:
 
 **Recommended Screenshots:**
+
 1. **Jenkins Dashboard** - Pipeline build history
 2. **AWS EC2 Console** - Running instance with Docker
 3. **GitHub Webhook** - Configured webhook
 4. **Architecture Diagram** - Draw.io හෝ Lucidchart use කරලා workflow diagram එකක්
 
 **Best Screenshot:**
+
 - Jenkins Pipeline view with successful builds (green checkmarks)
 - Shows: Build history, stages (Pull → Build → Deploy)
 
@@ -48,6 +50,7 @@
 ```
 
 **Tools to Create Diagram:**
+
 - https://app.diagrams.net/ (Draw.io)
 - https://www.lucidchart.com/
 - https://excalidraw.com/
@@ -57,6 +60,7 @@
 ### Option 3: Use Provided AWS Screenshot
 
 ඔබ දුන්න AWS EC2 screenshot එක use කරන්න පුළුවන්:
+
 - Instance summary page
 - Shows: Jenkins Server, Running state, Public IP
 
@@ -70,6 +74,7 @@ Screenshot එක ගත්තාම:
 2. **Location**: `public/projects/` folder එකට copy කරන්න
 
 **Full path:**
+
 ```
 c:\Users\Madupa Dilshan\Downloads\madupa-folio-sphere-main\madupa-folio-sphere-main\public\projects\cicd-pipeline.jpg
 ```
@@ -79,12 +84,14 @@ c:\Users\Madupa Dilshan\Downloads\madupa-folio-sphere-main\madupa-folio-sphere-m
 ## 🎨 Screenshot Tips
 
 **Good Screenshot Includes:**
+
 - ✅ Jenkins dashboard with successful builds
 - ✅ Pipeline stages visible
 - ✅ Clear, high resolution (1920x1080 or 1280x720)
 - ✅ Professional looking (crop unnecessary parts)
 
 **Avoid:**
+
 - ❌ Blurry or low-resolution images
 - ❌ Personal/sensitive information visible
 - ❌ Error messages or failed builds (unless showing debugging)
@@ -104,6 +111,7 @@ c:\Users\Madupa Dilshan\Downloads\madupa-folio-sphere-main\madupa-folio-sphere-m
 ### If Jenkins is stopped:
 
 **Option A:** Take AWS EC2 Console screenshot showing:
+
 - Instance details
 - Docker containers running
 - Security groups configured
@@ -115,6 +123,7 @@ c:\Users\Madupa Dilshan\Downloads\madupa-folio-sphere-main\madupa-folio-sphere-m
 ## 📋 Current Project Code
 
 Project already added to `Projects.tsx`:
+
 ```tsx
 {
   category: "DevOps/Cloud",
@@ -133,6 +142,7 @@ Project already added to `Projects.tsx`:
 
 1. Copy image to `public/projects/cicd-pipeline.jpg`
 2. Commit changes:
+
 ```cmd
 cd "c:\Users\Madupa Dilshan\Downloads\madupa-folio-sphere-main\madupa-folio-sphere-main"
 git add .
@@ -148,6 +158,7 @@ git push
 ## 🆘 Need Help?
 
 **මට screenshot එක capture කරන්න අමාරුයි:**
+
 - AWS EC2 screenshot එක use කරන්න
 - හෝ architecture diagram එකක් create කරන්න
 - හෝ මම temporary placeholder image එකක් create කරන්න පුළුවන්
