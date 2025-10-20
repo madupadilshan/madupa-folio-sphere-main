@@ -1,4 +1,4 @@
-import { ExternalLink, Github, ChevronDown } from "lucide-react";
+import { ExternalLink, Github, ChevronDown, ChevronUp } from "lucide-react";
 import { getAssetPath } from "@/lib/assets";
 import { useState } from "react";
 
@@ -147,31 +147,27 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Show More Button */}
-        {!showAll && projects.length > 3 && (
-          <div className="flex justify-center mb-8">
+        {/* Show More / Show Less Button */}
+        {projects.length > 3 && (
+          <div className="flex justify-center">
             <button
-              onClick={() => setShowAll(true)}
+              onClick={() => setShowAll(!showAll)}
               className="btn-hero-primary inline-flex items-center gap-2"
             >
-              <ChevronDown className="w-5 h-5" />
-              Show More Projects
+              {showAll ? (
+                <>
+                  <ChevronUp className="w-5 h-5" />
+                  Show Less
+                </>
+              ) : (
+                <>
+                  <ChevronDown className="w-5 h-5" />
+                  Show More Projects
+                </>
+              )}
             </button>
           </div>
         )}
-
-        {/* View All Button */}
-        <div className="flex justify-center">
-          <a
-            href="https://github.com/madupadilshan?tab=repositories"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-hero-primary inline-flex items-center gap-2"
-          >
-            <Github className="w-5 h-5" />
-            View All Projects on GitHub
-          </a>
-        </div>
       </div>
     </section>
   );
