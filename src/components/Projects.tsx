@@ -10,7 +10,7 @@ const projects = [
     tags: ["AWS", "Jenkins", "Docker", "CI/CD"],
     liveUrl: "", // No live demo
     githubUrl: "https://github.com/madupadilshan/cicd-project",
-    image: getAssetPath("/projects/cicd-pipeline.svg"),
+    image: getAssetPath("/projects/cicd-pipeline.png"),
   },
   {
     category: "Web Design",
@@ -77,7 +77,7 @@ const Projects = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-                
+
                 {/* Category Badge on Image */}
                 <span className="absolute top-4 left-4 px-3 py-1 bg-primary/90 backdrop-blur-sm text-primary-foreground text-xs font-semibold rounded-full">
                   {project.category}
