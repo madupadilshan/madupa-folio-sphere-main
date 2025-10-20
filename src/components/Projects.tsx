@@ -1,5 +1,6 @@
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, ChevronDown } from "lucide-react";
 import { getAssetPath } from "@/lib/assets";
+import { useState } from "react";
 
 const projects = [
   {
@@ -56,6 +57,9 @@ const projects = [
 ];
 
 const Projects = () => {
+  const [showAll, setShowAll] = useState(false);
+  const displayedProjects = showAll ? projects : projects.slice(0, 3);
+
   return (
     <section id="projects" className="section-container">
       <div className="max-w-6xl mx-auto">
@@ -65,7 +69,7 @@ const Projects = () => {
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {projects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <div
               key={index}
               className="card-portfolio space-y-4 group overflow-hidden"
@@ -142,6 +146,19 @@ const Projects = () => {
             </div>
           ))}
         </div>
+
+        {/* Show More Button */}
+        {!showAll && projects.length > 3 && (
+          <div className="flex justify-center mb-8">
+            <button
+              onClick={() => setShowAll(true)}
+              className="btn-hero-primary inline-flex items-center gap-2"
+            >
+              <ChevronDown className="w-5 h-5" />
+              Show More Projects
+            </button>
+          </div>
+        )}
 
         {/* View All Button */}
         <div className="flex justify-center">
