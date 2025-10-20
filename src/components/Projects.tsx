@@ -11,6 +11,7 @@ const projects = [
     liveUrl: "", // No live demo
     githubUrl: "https://github.com/madupadilshan/cicd-project",
     image: getAssetPath("/projects/cicd-pipeline.png"),
+    hideLiveDemo: true, // Hide live demo button for this project
   },
   {
     category: "Web Design",
@@ -108,21 +109,23 @@ const Projects = () => {
 
               {/* Links */}
               <div className="flex gap-4 pt-4">
-                {project.liveUrl ? (
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm text-primary hover:text-accent transition-colors"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    Live Demo
-                  </a>
-                ) : (
-                  <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-                    <ExternalLink className="w-4 h-4" />
-                    Coming Soon
-                  </span>
+                {!project.hideLiveDemo && (
+                  project.liveUrl ? (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm text-primary hover:text-accent transition-colors"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Live Demo
+                    </a>
+                  ) : (
+                    <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
+                      <ExternalLink className="w-4 h-4" />
+                      Coming Soon
+                    </span>
+                  )
                 )}
                 {project.githubUrl && (
                   <a
