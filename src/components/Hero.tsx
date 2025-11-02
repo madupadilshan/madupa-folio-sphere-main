@@ -47,6 +47,20 @@ const Hero = () => {
                   />
                 </div>
 
+                {/* Floating Harness Badge - Top Left */}
+                <div className="absolute -left-6 -top-6 w-20 h-20 animate-float" style={{ animationDelay: '0.3s' }}>
+                  <div className="relative w-full h-full bg-card backdrop-blur-sm rounded-full border-2 border-primary/50 p-2 shadow-xl hover:scale-110 transition-transform cursor-pointer group">
+                    <img
+                      src={getAssetPath("/certificates/harness-ci-certified-expert.png")}
+                      alt="Harness CI Certified Expert"
+                      className="w-full h-full object-contain"
+                    />
+                    <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-card backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-medium text-foreground whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg border-2 border-primary/30">
+                      Harness CI
+                    </div>
+                  </div>
+                </div>
+
                 {/* Floating AWS Badge - Top Right */}
                 <div className="absolute -right-6 -top-6 w-20 h-20 animate-float">
                   <div className="relative w-full h-full bg-card backdrop-blur-sm rounded-full border-2 border-primary/50 p-2 shadow-xl hover:scale-110 transition-transform cursor-pointer group">
