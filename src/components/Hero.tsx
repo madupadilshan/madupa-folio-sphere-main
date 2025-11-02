@@ -61,10 +61,10 @@ const Hero = () => {
 
       <div className="section-container relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-start md:items-center">
             {/* Left Side - Profile Image with Badge Slider */}
-            <div className="flex flex-col items-center md:items-end animate-fade-in-up gap-8">
-              <div className="relative w-72 h-72 lg:w-80 lg:h-80">
+            <div className="flex flex-col items-center animate-fade-in-up gap-10 w-full">
+              <div className="relative w-72 h-72 lg:w-80 lg:h-80 mx-auto">
                 {/* Main Profile Image */}
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 blur-2xl animate-pulse"></div>
                 <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl shadow-primary/30 hover:scale-105 transition-transform duration-500">
@@ -76,16 +76,16 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Animated Badge Slider */}
-              <div className="relative w-full max-w-md overflow-hidden rounded-2xl bg-card/40 backdrop-blur-md border border-primary/20 shadow-xl p-4">
-                <div className="flex gap-4 animate-marquee hover:pause-animation">
+              {/* Animated Badge Slider - Larger */}
+              <div className="relative w-full max-w-lg overflow-hidden rounded-2xl bg-card/40 backdrop-blur-md border border-primary/20 shadow-xl p-6">
+                <div className="flex gap-6 animate-marquee">
                   {/* First set of badges */}
                   {badges.map((badge, index) => (
                     <div
                       key={`badge-1-${index}`}
                       className="flex-shrink-0 group relative"
                     >
-                      <div className="w-16 h-16 bg-background/80 backdrop-blur-sm rounded-xl border-2 border-primary/30 p-2 shadow-lg hover:scale-110 hover:border-primary transition-all duration-300 cursor-pointer">
+                      <div className="w-20 h-20 bg-background/80 backdrop-blur-sm rounded-xl border-2 border-primary/30 p-2.5 shadow-lg hover:scale-110 hover:border-primary transition-all duration-300 cursor-pointer">
                         <img
                           src={getAssetPath(badge.image)}
                           alt={badge.alt}
@@ -93,7 +93,7 @@ const Hero = () => {
                         />
                       </div>
                       {/* Tooltip */}
-                      <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-card backdrop-blur-sm px-2 py-1 rounded-lg text-xs font-medium text-foreground whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg border border-primary/30 pointer-events-none">
+                      <div className="absolute -bottom-9 left-1/2 -translate-x-1/2 bg-card backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-medium text-foreground whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg border border-primary/30 pointer-events-none z-10">
                         {badge.name}
                       </div>
                     </div>
@@ -104,7 +104,7 @@ const Hero = () => {
                       key={`badge-2-${index}`}
                       className="flex-shrink-0 group relative"
                     >
-                      <div className="w-16 h-16 bg-background/80 backdrop-blur-sm rounded-xl border-2 border-primary/30 p-2 shadow-lg hover:scale-110 hover:border-primary transition-all duration-300 cursor-pointer">
+                      <div className="w-20 h-20 bg-background/80 backdrop-blur-sm rounded-xl border-2 border-primary/30 p-2.5 shadow-lg hover:scale-110 hover:border-primary transition-all duration-300 cursor-pointer">
                         <img
                           src={getAssetPath(badge.image)}
                           alt={badge.alt}
@@ -112,15 +112,15 @@ const Hero = () => {
                         />
                       </div>
                       {/* Tooltip */}
-                      <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-card backdrop-blur-sm px-2 py-1 rounded-lg text-xs font-medium text-foreground whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg border border-primary/30 pointer-events-none">
+                      <div className="absolute -bottom-9 left-1/2 -translate-x-1/2 bg-card backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-medium text-foreground whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg border border-primary/30 pointer-events-none z-10">
                         {badge.name}
                       </div>
                     </div>
                   ))}
                 </div>
                 {/* Gradient overlays for smooth edges */}
-                <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-card/40 to-transparent pointer-events-none"></div>
-                <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-card/40 to-transparent pointer-events-none"></div>
+                <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-card/40 to-transparent pointer-events-none"></div>
+                <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-card/40 to-transparent pointer-events-none"></div>
               </div>
             </div>
 
