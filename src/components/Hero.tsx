@@ -8,6 +8,34 @@ const roles = [
   "Network Technologist",
 ];
 
+const badges = [
+  {
+    image: "/certificates/harness-ci-certified-expert.png",
+    alt: "Harness CI Certified Expert",
+    name: "Harness CI"
+  },
+  {
+    image: "/certificates/aws-educate-introduction-to-cloud-101-training-badg.png",
+    alt: "AWS Cloud Computing 101",
+    name: "AWS Cloud 101"
+  },
+  {
+    image: "/certificates/aws-knowledge-cloud-essentials-training-badge.png",
+    alt: "AWS Cloud Essentials",
+    name: "AWS Essentials"
+  },
+  {
+    image: "/certificates/aviatrix-ace-associate-badge.png",
+    alt: "Aviatrix ACE",
+    name: "Aviatrix ACE"
+  },
+  {
+    image: "/certificates/aws-amazon-q-developer-fundamentals.png",
+    alt: "Amazon Q Developer",
+    name: "Amazon Q Dev"
+  }
+];
+
 const Hero = () => {
   const handleContactClick = () => {
     const contactSection = document.getElementById("contact");
@@ -34,8 +62,8 @@ const Hero = () => {
       <div className="section-container relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left Side - Profile Image with Floating Badges */}
-            <div className="flex justify-center md:justify-end animate-fade-in-up">
+            {/* Left Side - Profile Image with Badge Slider */}
+            <div className="flex flex-col items-center md:items-end animate-fade-in-up gap-8">
               <div className="relative w-72 h-72 lg:w-80 lg:h-80">
                 {/* Main Profile Image */}
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 blur-2xl animate-pulse"></div>
@@ -46,76 +74,53 @@ const Hero = () => {
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
+              </div>
 
-                {/* Floating Harness Badge - Top Left */}
-                <div className="absolute -left-6 -top-6 w-20 h-20 animate-float" style={{ animationDelay: '0.3s' }}>
-                  <div className="relative w-full h-full bg-card backdrop-blur-sm rounded-full border-2 border-primary/50 p-2 shadow-xl hover:scale-110 transition-transform cursor-pointer group">
-                    <img
-                      src={getAssetPath("/certificates/harness-ci-certified-expert.png")}
-                      alt="Harness CI Certified Expert"
-                      className="w-full h-full object-contain"
-                    />
-                    <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-card backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-medium text-foreground whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg border-2 border-primary/30">
-                      Harness CI
+              {/* Animated Badge Slider */}
+              <div className="relative w-full max-w-md overflow-hidden rounded-2xl bg-card/40 backdrop-blur-md border border-primary/20 shadow-xl p-4">
+                <div className="flex gap-4 animate-marquee hover:pause-animation">
+                  {/* First set of badges */}
+                  {badges.map((badge, index) => (
+                    <div
+                      key={`badge-1-${index}`}
+                      className="flex-shrink-0 group relative"
+                    >
+                      <div className="w-16 h-16 bg-background/80 backdrop-blur-sm rounded-xl border-2 border-primary/30 p-2 shadow-lg hover:scale-110 hover:border-primary transition-all duration-300 cursor-pointer">
+                        <img
+                          src={getAssetPath(badge.image)}
+                          alt={badge.alt}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      {/* Tooltip */}
+                      <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-card backdrop-blur-sm px-2 py-1 rounded-lg text-xs font-medium text-foreground whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg border border-primary/30 pointer-events-none">
+                        {badge.name}
+                      </div>
                     </div>
-                  </div>
-                </div>
-
-                {/* Floating AWS Badge - Top Right */}
-                <div className="absolute -right-6 -top-6 w-20 h-20 animate-float">
-                  <div className="relative w-full h-full bg-card backdrop-blur-sm rounded-full border-2 border-primary/50 p-2 shadow-xl hover:scale-110 transition-transform cursor-pointer group">
-                    <img
-                      src={getAssetPath("/certificates/aws-educate-introduction-to-cloud-101-training-badg.png")}
-                      alt="AWS Cloud Computing 101"
-                      className="w-full h-full object-contain"
-                    />
-                    <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-card backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-medium text-foreground whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg border-2 border-primary/30">
-                      AWS Cloud 101
+                  ))}
+                  {/* Duplicate set for seamless loop */}
+                  {badges.map((badge, index) => (
+                    <div
+                      key={`badge-2-${index}`}
+                      className="flex-shrink-0 group relative"
+                    >
+                      <div className="w-16 h-16 bg-background/80 backdrop-blur-sm rounded-xl border-2 border-primary/30 p-2 shadow-lg hover:scale-110 hover:border-primary transition-all duration-300 cursor-pointer">
+                        <img
+                          src={getAssetPath(badge.image)}
+                          alt={badge.alt}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      {/* Tooltip */}
+                      <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-card backdrop-blur-sm px-2 py-1 rounded-lg text-xs font-medium text-foreground whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg border border-primary/30 pointer-events-none">
+                        {badge.name}
+                      </div>
                     </div>
-                  </div>
+                  ))}
                 </div>
-
-                {/* Floating AWS Badge - Left */}
-                <div className="absolute -left-6 top-1/3 w-20 h-20 animate-float" style={{ animationDelay: '0.5s' }}>
-                  <div className="relative w-full h-full bg-card backdrop-blur-sm rounded-full border-2 border-primary/50 p-2 shadow-xl hover:scale-110 transition-transform cursor-pointer group">
-                    <img
-                      src={getAssetPath("/certificates/aws-knowledge-cloud-essentials-training-badge.png")}
-                      alt="AWS Cloud Essentials"
-                      className="w-full h-full object-contain"
-                    />
-                    <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-card backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-medium text-foreground whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg border-2 border-primary/30">
-                      AWS Essentials
-                    </div>
-                  </div>
-                </div>
-
-                {/* Floating Aviatrix Badge - Bottom Right */}
-                <div className="absolute -right-4 -bottom-4 w-20 h-20 animate-float" style={{ animationDelay: '1s' }}>
-                  <div className="relative w-full h-full bg-card backdrop-blur-sm rounded-full border-2 border-primary/50 p-2 shadow-xl hover:scale-110 transition-transform cursor-pointer group">
-                    <img
-                      src={getAssetPath("/certificates/aviatrix-ace-associate-badge.png")}
-                      alt="Aviatrix ACE"
-                      className="w-full h-full object-contain"
-                    />
-                    <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-card backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-medium text-foreground whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg border-2 border-primary/30">
-                      Aviatrix ACE
-                    </div>
-                  </div>
-                </div>
-
-                {/* Floating Amazon Q Badge - Bottom Left */}
-                <div className="absolute -left-4 -bottom-4 w-20 h-20 animate-float" style={{ animationDelay: '1.5s' }}>
-                  <div className="relative w-full h-full bg-card backdrop-blur-sm rounded-full border-2 border-primary/50 p-2 shadow-xl hover:scale-110 transition-transform cursor-pointer group">
-                    <img
-                      src={getAssetPath("/certificates/aws-amazon-q-developer-fundamentals.png")}
-                      alt="Amazon Q Developer"
-                      className="w-full h-full object-contain"
-                    />
-                    <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-card backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-medium text-foreground whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg border-2 border-primary/30">
-                      Amazon Q Dev
-                    </div>
-                  </div>
-                </div>
+                {/* Gradient overlays for smooth edges */}
+                <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-card/40 to-transparent pointer-events-none"></div>
+                <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-card/40 to-transparent pointer-events-none"></div>
               </div>
             </div>
 
