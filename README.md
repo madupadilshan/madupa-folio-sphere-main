@@ -1,16 +1,11 @@
-# 🚀 Madupa Dilshan - Portfolio Website# Welcome to your Lovable project
-
+# 🚀 Madupa Dilshan - Portfolio Website# 
 
 
 A modern, responsive personal portfolio website showcasing my skills, projects, certifications, and experience as a Cloud & DevOps Enthusiast, MERN-Stack Developer, and Network Technologist.## Project info
 
 
 
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://madupadilshan.github.io/madupa-folio-sphere-main/)**URL**: https://lovable.dev/projects/75158207-e15e-43d7-bb67-aec50decbb38
 
-[![GitHub](https://img.shields.io/badge/github-repo-blue)](https://github.com/madupadilshan/madupa-folio-sphere-main)
-
-[![License](https://img.shields.io/badge/license-MIT-orange)](LICENSE)## How can I edit this code?
 
 
 
