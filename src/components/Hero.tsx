@@ -85,7 +85,7 @@ const Hero = () => {
                       key={`badge-1-${index}`}
                       className="flex-shrink-0 group relative"
                     >
-                      <div className="w-28 h-28 bg-background/80 backdrop-blur-sm rounded-xl border-2 border-primary/30 p-3 shadow-lg hover:scale-110 hover:border-primary transition-all duration-300 cursor-pointer">
+                      <div className="w-28 h-28 hover:scale-110 transition-all duration-300 cursor-pointer">
                         <img
                           src={getAssetPath(badge.image)}
                           alt={badge.alt}
@@ -104,7 +104,7 @@ const Hero = () => {
                       key={`badge-2-${index}`}
                       className="flex-shrink-0 group relative"
                     >
-                      <div className="w-28 h-28 bg-background/80 backdrop-blur-sm rounded-xl border-2 border-primary/30 p-3 shadow-lg hover:scale-110 hover:border-primary transition-all duration-300 cursor-pointer">
+                      <div className="w-28 h-28 hover:scale-110 transition-all duration-300 cursor-pointer">
                         <img
                           src={getAssetPath(badge.image)}
                           alt={badge.alt}
