@@ -77,7 +77,7 @@ const Hero = () => {
               </div>
 
               {/* Animated Badge Slider - Larger */}
-              <div className="relative w-full max-w-lg overflow-hidden rounded-2xl bg-card/40 backdrop-blur-md border border-primary/20 shadow-xl p-6">
+              <div className="relative w-full max-w-lg overflow-hidden rounded-2xl bg-card/40 backdrop-blur-md border border-primary/20 shadow-xl p-6 pb-14">
                 <div className="flex gap-6 animate-marquee">
                   {/* First set of badges */}
                   {badges.map((badge, index) => (
