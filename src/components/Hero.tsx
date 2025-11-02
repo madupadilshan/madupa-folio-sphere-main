@@ -93,7 +93,7 @@ const Hero = () => {
                         />
                       </div>
                       {/* Tooltip */}
-                      <div className="absolute -bottom-9 left-1/2 -translate-x-1/2 bg-card backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-medium text-foreground whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg border border-primary/30 pointer-events-none z-10">
+                      <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-2xl border-2 border-primary/50 pointer-events-none z-10">
                         {badge.name}
                       </div>
                     </div>
@@ -112,7 +112,7 @@ const Hero = () => {
                         />
                       </div>
                       {/* Tooltip */}
-                      <div className="absolute -bottom-9 left-1/2 -translate-x-1/2 bg-card backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-medium text-foreground whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg border border-primary/30 pointer-events-none z-10">
+                      <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-2xl border-2 border-primary/50 pointer-events-none z-10">
                         {badge.name}
                       </div>
                     </div>
