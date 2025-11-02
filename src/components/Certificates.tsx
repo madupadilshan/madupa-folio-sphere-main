@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Award, ExternalLink, Calendar } from "lucide-react";
 import { getAssetPath } from "@/lib/assets";
 
@@ -81,9 +82,23 @@ const certificates = [
     image: getAssetPath("/certificates/aviatrix-ace-multicloud-network-associate.jpg"),
     verifyUrl: "https://www.credly.com/badges/b386ee6f-2b1f-4eb7-a5fb-3ddf683e5d72/public_url",
   },
+  // NOTE: Add the harness certificate image file to `public/certificates/harness-ci-certified-expert.png`
+  {
+    date: "Nov 2025",
+    title: "Harness Certified Expert",
+    provider: "Harness",
+    description: "Continuous Integration - Developer level badge for Harness CI knowledge and best practices.",
+    type: "Digital Badge",
+    image: getAssetPath("/certificates/harness-ci-certified-expert.png"),
+    verifyUrl: "",
+  },
 ];
 
 const Certificates = () => {
+  const [showAll, setShowAll] = useState(false);
+  const VISIBLE_LIMIT = 9;
+  const visibleCerts = showAll ? certificates : certificates.slice(0, VISIBLE_LIMIT);
+
   return (
     <section id="certificates" className="section-container bg-secondary/30">
       <div className="max-w-6xl mx-auto">
@@ -91,9 +106,9 @@ const Certificates = () => {
         <p className="section-subtitle">My Professional Certifications</p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {certificates.map((cert, index) => (
+          {visibleCerts.map((cert, index) => (
             <div
-              key={index}
+              key={`${cert.title}-${index}`}
               className="card-portfolio space-y-4 group overflow-hidden"
             >
               {/* Certificate Image */}
@@ -178,6 +193,19 @@ const Certificates = () => {
             </div>
           ))}
         </div>
+
+        {certificates.length > VISIBLE_LIMIT && (
+          <div className="mt-6 flex justify-center">
+            <button
+              type="button"
+              aria-expanded={showAll}
+              onClick={() => setShowAll((s) => !s)}
+              className="inline-flex items-center px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition"
+            >
+              {showAll ? "Show less" : `See more (${certificates.length - VISIBLE_LIMIT})`}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

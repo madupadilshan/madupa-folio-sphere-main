@@ -1,17 +1,14 @@
-# 🚀 Madupa Dilshan - Portfolio Website# 
-
+# 🚀 Madupa Dilshan - Portfolio Website# Welcome to your Lovable project
 
 A modern, responsive personal portfolio website showcasing my skills, projects, certifications, and experience as a Cloud & DevOps Enthusiast, MERN-Stack Developer, and Network Technologist.## Project info
 
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://madupadilshan.github.io/madupa-folio-sphere-main/)**URL**: https://lovable.dev/projects/75158207-e15e-43d7-bb67-aec50decbb38
 
+[![GitHub](https://img.shields.io/badge/github-repo-blue)](https://github.com/madupadilshan/madupa-folio-sphere-main)
 
-
-
-
+[![License](https://img.shields.io/badge/license-MIT-orange)](LICENSE)## How can I edit this code?
 
 ## ✨ FeaturesThere are several ways of editing your application.
-
-
 
 - 🎨 **Modern UI/UX** - Clean, professional design with smooth animations**Use Lovable**
 
@@ -89,7 +86,7 @@ cd <YOUR_PROJECT_NAME>
 
 1. **Clone the repository**- Click on the "Code" button (green button) near the top right.
 
-```bash- Select the "Codespaces" tab.
+````bash- Select the "Codespaces" tab.
 
 git clone https://github.com/madupadilshan/madupa-folio-sphere-main.git- Click on "New codespace" to launch a new Codespace environment.
 
@@ -103,13 +100,13 @@ git clone https://github.com/madupadilshan/madupa-folio-sphere-main.git- Click o
 
 cd madupa-folio-sphere-mainThis project is built with:
 
-```
+````
 
 - Vite
 
 3. **Install dependencies**- TypeScript
 
-```bash- React
+````bash- React
 
 npm install- shadcn-ui
 
@@ -123,13 +120,13 @@ npm install- shadcn-ui
 
 npm run devSimply open [Lovable](https://lovable.dev/projects/75158207-e15e-43d7-bb67-aec50decbb38) and click on Share -> Publish.
 
-```
+````
 
 ## Can I connect a custom domain to my Lovable project?
 
 5. **Open in browser**
 
-```Yes, you can!
+````Yes, you can!
 
 http://localhost:8080
 
@@ -143,14 +140,16 @@ http://localhost:8080
 ### Build for Production
 ```bash
 npm run build
-```
+````
 
 ### Preview Production Build
+
 ```bash
 npm run preview
 ```
 
 ### Deploy to GitHub Pages
+
 ```bash
 npm run deploy
 ```
@@ -194,7 +193,9 @@ madupa-folio-sphere-main/
 ## 🎨 Customization
 
 ### Update Personal Information
+
 Edit the following files:
+
 - `src/components/Hero.tsx` - Name, roles, bio
 - `src/components/About.tsx` - About section content
 - `src/components/Skills.tsx` - Skills and technologies
@@ -203,8 +204,10 @@ Edit the following files:
 - `src/components/Contact.tsx` - Contact information
 
 ### Add New Certificate
+
 1. Add certificate image to `public/certificates/`
 2. Update `src/components/Certificates.tsx`:
+
 ```tsx
 {
   date: "Month Year",
@@ -217,6 +220,7 @@ Edit the following files:
 ```
 
 ### Configure EmailJS
+
 Follow instructions in `EMAILJS_SETUP.md`
 
 ## 🌐 Deployment
