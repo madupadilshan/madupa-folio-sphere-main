@@ -5,6 +5,18 @@ import { useState } from "react";
 const projects = [
   {
     category: "DevOps/Cloud",
+    title: "Full Automated CI/CD Pipeline for Node.js",
+    description:
+      "Complete CI/CD automation with GitHub Actions deploying containerized Node.js app to AWS ECS Fargate. Infrastructure provisioned with Terraform including VPC, ECR, ECS, and ALB. Automatic build, test, and deployment on every git push.",
+    tags: ["Node.js", "Docker", "Terraform", "GitHub Actions", "AWS ECS", "AWS ECR"],
+    liveUrl: "",
+    githubUrl: "https://github.com/madupadilshan/nodejs-aws-cicd.git",
+    image: getAssetPath("/projects/nodejs-cicd-pipeline.png"),
+    hideLiveDemo: true,
+    date: "Nov 2024",
+  },
+  {
+    category: "DevOps/Cloud",
     title: "Automated CI/CD Pipeline on AWS",
     description:
       "Fully automated CI/CD pipeline with Jenkins, Docker, and AWS EC2. Git push triggers automatic container build and deployment via GitHub webhooks.",
