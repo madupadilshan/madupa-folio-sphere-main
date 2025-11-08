@@ -5,6 +5,15 @@ import { getAssetPath } from "@/lib/assets";
 const certificates = [
   {
     date: "Nov 2025",
+    title: "Ultimate AWS Certified Solutions Architect Associate 2025",
+    provider: "Udemy",
+    description: "Comprehensive AWS Solutions Architect Associate certification preparation covering core AWS services, best practices, and architecture design.",
+    courseLength: "27 total hours",
+    image: getAssetPath("/certificates/udemy-aws-solutions-architect-associate.jpg"),
+    verifyUrl: "https://www.udemy.com/certificate/UC-b2e20a5e-131b-4bd4-9829-f844f15b18d8/",
+  },
+  {
+    date: "Nov 2025",
     title: "Amazon Q Developer Fundamentals",
     provider: "AWS Training & Certification",
     description: "Foundational knowledge of Amazon Q Developer for AI-powered coding assistance and software development.",
