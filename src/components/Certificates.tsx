@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Award, ExternalLink, Calendar } from "lucide-react";
 import { getAssetPath } from "@/lib/assets";
+import AnimatedCard from "./AnimatedCard";
 
 const certificates = [
   {
@@ -116,8 +117,9 @@ const Certificates = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {visibleCerts.map((cert, index) => (
-            <div
+            <AnimatedCard
               key={`${cert.title}-${index}`}
+              delay={index * 0.1}
               className="card-portfolio space-y-4 group overflow-hidden"
             >
               {/* Certificate Image */}
@@ -199,7 +201,7 @@ const Certificates = () => {
                   <ExternalLink className="w-4 h-4" />
                 </a>
               )}
-            </div>
+            </AnimatedCard>
           ))}
         </div>
 

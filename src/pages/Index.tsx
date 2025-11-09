@@ -9,22 +9,51 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 import ThemeToggle from "@/components/ThemeToggle";
+import PageTransition from "@/components/PageTransition";
+import SectionTransition from "@/components/SectionTransition";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <Hero />
-      <About />
-      <Education />
-      <Skills />
-      <Certificates />
-      <Projects />
-      <Contact />
-      <Footer />
-      <BackToTop />
-      <ThemeToggle />
-    </div>
+    <PageTransition>
+      <div className="min-h-screen">
+        <Navbar />
+
+        <SectionTransition direction="fade">
+          <Hero />
+        </SectionTransition>
+
+        <SectionTransition direction="up" delay={0.1}>
+          <About />
+        </SectionTransition>
+
+        <SectionTransition direction="left" delay={0.2}>
+          <Education />
+        </SectionTransition>
+
+        <SectionTransition direction="right" delay={0.1}>
+          <Skills />
+        </SectionTransition>
+
+        <SectionTransition direction="up" delay={0.1}>
+          <Certificates />
+        </SectionTransition>
+
+        <SectionTransition direction="scale" delay={0.1}>
+          <Projects />
+        </SectionTransition>
+
+        <SectionTransition direction="up" delay={0.1}>
+          <Contact />
+        </SectionTransition>
+
+        <SectionTransition direction="fade">
+          <Footer />
+        </SectionTransition>
+
+        <BackToTop />
+        <ThemeToggle />
+      </div>
+    </PageTransition>
   );
 };
 

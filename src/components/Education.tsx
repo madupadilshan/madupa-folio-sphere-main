@@ -1,4 +1,5 @@
 import { GraduationCap, Calendar } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Education = () => {
   return (
@@ -6,7 +7,18 @@ const Education = () => {
       <div className="max-w-4xl mx-auto">
         <h2 className="section-heading">Education</h2>
 
-        <div className="card-portfolio max-w-3xl mx-auto">
+        <motion.div
+          className="card-portfolio max-w-3xl mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+          whileHover={{
+            scale: 1.02,
+            boxShadow: "0 20px 40px rgba(0, 200, 255, 0.2)",
+            transition: { duration: 0.3 }
+          }}
+        >
           <div className="flex flex-col md:flex-row gap-6 items-start">
             {/* Icon */}
             <div className="flex-shrink-0 w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center">
@@ -18,7 +30,7 @@ const Education = () => {
               <h3 className="text-2xl font-bold text-foreground">
                 Bachelor of Information and Communication Technology
               </h3>
-              
+
               <p className="text-lg text-primary font-medium">
                 University of Sri Jayewardenepura, Sri Lanka
               </p>
@@ -29,7 +41,7 @@ const Education = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

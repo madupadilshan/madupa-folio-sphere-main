@@ -1,5 +1,7 @@
 import { Building2, GraduationCap, Download, Code2, Network, Cloud, Zap, Shield } from "lucide-react";
 import { getAssetPath } from "@/lib/assets";
+import AnimatedCard from "./AnimatedCard";
+import { motion } from "framer-motion";
 
 const expertise = [
   {
@@ -29,7 +31,7 @@ const About = () => {
     <section id="about" className="section-container">
       <div className="max-w-5xl mx-auto">
         <h2 className="section-heading">About Me</h2>
-        
+
         <div className="space-y-6 text-lg text-muted-foreground">
           <p className="leading-relaxed">
             I am a motivated third-year Network Technology student at the University of
@@ -41,26 +43,39 @@ const About = () => {
           {/* Expertise Grid */}
           <div className="grid md:grid-cols-2 gap-6 py-8">
             {expertise.map((item, index) => (
-              <div
+              <AnimatedCard
                 key={index}
+                delay={index * 0.1}
                 className="card-portfolio flex gap-4 items-start"
               >
                 <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
                 <p className="text-foreground leading-relaxed">{item.text}</p>
-              </div>
+              </AnimatedCard>
             ))}
           </div>
 
-          <p className="leading-relaxed">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="leading-relaxed"
+          >
             I am actively seeking a challenging internship to apply my skills in both
             web development and networking, and to gain valuable hands-on experience in
             a professional environment.
-          </p>
+          </motion.p>
 
           {/* CV Download Button */}
-          <div className="flex justify-center pt-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="flex justify-center pt-4"
+          >
             <a
               href={getAssetPath("/Madupa_Dilshan_CV.pdf")}
               download="Madupa_Dilshan_CV.pdf"
@@ -69,7 +84,7 @@ const About = () => {
               <Download className="w-5 h-5" />
               Download My CV
             </a>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

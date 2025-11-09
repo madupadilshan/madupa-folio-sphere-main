@@ -35,9 +35,9 @@ draw.text((700, 85), "Node.js Application → AWS ECS Fargate", fill=text_muted,
 def draw_card(x, y, w, h, r, fill, outline, title, items=None):
     # Shadow effect
     shadow_offset = 4
-    draw.rectangle([x+shadow_offset, y+shadow_offset, x+w+shadow_offset, y+h+shadow_offset], 
+    draw.rectangle([x+shadow_offset, y+shadow_offset, x+w+shadow_offset, y+h+shadow_offset],
                    fill='#00000050')
-    
+
     # Main card
     draw.rectangle([x+r, y, x+w-r, y+h], fill=fill, outline=outline, width=3)
     draw.rectangle([x, y+r, x+w, y+h-r], fill=fill, outline=outline, width=3)
@@ -45,10 +45,10 @@ def draw_card(x, y, w, h, r, fill, outline, title, items=None):
     draw.ellipse([x+w-2*r, y, x+w, y+2*r], fill=fill, outline=outline, width=3)
     draw.ellipse([x, y+h-2*r, x+2*r, y+h], fill=fill, outline=outline, width=3)
     draw.ellipse([x+w-2*r, y+h-2*r, x+w, y+h], fill=fill, outline=outline, width=3)
-    
+
     # Title
     draw.text((x+w//2, y+25), title, fill=outline, font=heading_font, anchor="mm")
-    
+
     # Items
     if items:
         y_offset = y + 55
@@ -97,12 +97,12 @@ for name, desc, x, y in services:
 def draw_workflow_arrow(x1, y1, x2, y2, color=primary, label=""):
     # Main line
     draw.line([(x1, y1), (x2, y2)], fill=color, width=4)
-    
+
     # Arrowhead
     arrow_size = 15
     if x2 > x1:  # Right arrow
         draw.polygon([(x2, y2), (x2-arrow_size, y2-8), (x2-arrow_size, y2+8)], fill=color)
-    
+
     # Label
     if label:
         mid_x, mid_y = (x1 + x2) // 2, (y1 + y2) // 2 - 15
@@ -120,11 +120,11 @@ draw.polygon([(700, 420), (695, 405), (705, 405)], fill=accent)
 # Tech stack footer
 footer_y = 850
 tech_items = [
-    "Node.js", "Express", "Docker", "Terraform", 
+    "Node.js", "Express", "Docker", "Terraform",
     "GitHub Actions", "AWS ECS", "AWS ECR", "AWS VPC", "AWS ALB"
 ]
 tech_text = " • ".join(tech_items)
-draw.text((700, footer_y), f"Tech Stack: {tech_text}", 
+draw.text((700, footer_y), f"Tech Stack: {tech_text}",
           fill=text_muted, font=small_font, anchor="mm")
 
 # Border frame

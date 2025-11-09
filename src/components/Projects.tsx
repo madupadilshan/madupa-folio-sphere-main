@@ -1,6 +1,7 @@
 import { ExternalLink, Github, ChevronDown, ChevronUp } from "lucide-react";
 import { getAssetPath } from "@/lib/assets";
 import { useState } from "react";
+import AnimatedCard from "./AnimatedCard";
 
 const projects = [
   {
@@ -82,8 +83,9 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {displayedProjects.map((project, index) => (
-            <div
+            <AnimatedCard
               key={index}
+              delay={index * 0.15}
               className="card-portfolio space-y-4 group overflow-hidden"
             >
               {/* Project Image */}
@@ -155,7 +157,7 @@ const Projects = () => {
                   </a>
                 )}
               </div>
-            </div>
+            </AnimatedCard>
           ))}
         </div>
 

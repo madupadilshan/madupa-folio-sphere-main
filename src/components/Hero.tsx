@@ -1,6 +1,7 @@
 import { Download, Mail, Github, Linkedin, Twitter } from "lucide-react";
 import Typewriter from "typewriter-effect";
 import { getAssetPath } from "@/lib/assets";
+import { motion } from "framer-motion";
 
 const roles = [
   "Cloud & DevOps Enthusiast",

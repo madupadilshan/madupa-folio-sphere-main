@@ -1,4 +1,5 @@
 import { Shield, Code, Layers, Database, Wrench, Sparkles } from "lucide-react";
+import AnimatedCard from "./AnimatedCard";
 
 const skillCategories = [
   {
@@ -51,8 +52,9 @@ const Skills = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
-            <div
+            <AnimatedCard
               key={index}
+              delay={index * 0.1}
               className="card-portfolio space-y-4"
             >
               <div className="flex items-center gap-3">
@@ -74,7 +76,7 @@ const Skills = () => {
                   </span>
                 ))}
               </div>
-            </div>
+            </AnimatedCard>
           ))}
         </div>
       </div>

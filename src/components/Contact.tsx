@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Loader2 } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
+import AnimatedCard from "./AnimatedCard";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,7 +16,7 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
