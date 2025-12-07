@@ -1,4 +1,4 @@
-import { Building2, GraduationCap, Download, Code2, Network, Cloud, Zap, Shield } from "lucide-react";
+import { Download, Code2, Network, Cloud, Zap, Shield } from "lucide-react";
 import { getAssetPath } from "@/lib/assets";
 import AnimatedCard from "./AnimatedCard";
 import { motion } from "framer-motion";

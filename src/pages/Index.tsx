@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -11,10 +12,15 @@ import BackToTop from "@/components/BackToTop";
 import ThemeToggle from "@/components/ThemeToggle";
 import PageTransition from "@/components/PageTransition";
 import SectionTransition from "@/components/SectionTransition";
+import LoadingScreen from "@/components/LoadingScreen";
 
 const Index = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
-    <PageTransition>
+    <>
+      {isLoading && <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />}
+      <PageTransition>
       <div className="min-h-screen">
         <Navbar />
 
@@ -53,7 +59,8 @@ const Index = () => {
         <BackToTop />
         <ThemeToggle />
       </div>
-    </PageTransition>
+      </PageTransition>
+    </>
   );
 };
 

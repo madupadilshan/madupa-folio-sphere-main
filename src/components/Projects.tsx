@@ -5,6 +5,16 @@ import AnimatedCard from "./AnimatedCard";
 
 const projects = [
   {
+    category: "AI/ML",
+    title: "AI-Powered Recruitment Platform",
+    description:
+      "Full-stack recruitment platform with AI-driven CV analysis and job matching using React, Node.js, and Python microservices integrated with Google Gemini 2.0 AI. Containerized with Docker, implemented CI/CD pipeline using GitHub Actions, and deployed to cloud with Nginx and Let's Encrypt SSL.",
+    tags: ["React", "Node.js", "MongoDB Atlas", "Python Flask", "Google Gemini AI", "Docker", "GitHub Actions", "Socket.io", "JWT"],
+    liveUrl: "https://recruitmentapp.live/",
+    githubUrl: "https://github.com/madupadilshan/recruitment-ai-system",
+    image: getAssetPath("/projects/recruitment-system.png"),
+  },
+  {
     category: "DevOps/Cloud",
     title: "Full Automated CI/CD Pipeline for Node.js",
     description:
@@ -36,16 +46,6 @@ const projects = [
     liveUrl: "https://madupadilshan.github.io/portfolio/",
     githubUrl: "https://github.com/madupadilshan/portfolio",
     image: getAssetPath("/projects/portfolio.jpg"),
-  },
-  {
-    category: "AI/ML",
-    title: "AI-Powered Recruitment System",
-    description:
-      "An intelligent system that scores and ranks job applicants by analyzing their CVs against job descriptions using machine learning.",
-    tags: ["MERN", "Python", "AI/ML"],
-    liveUrl: "https://recruitmentapp.live/",
-    githubUrl: "https://github.com/madupadilshan/recruitment-ai-system",
-    image: getAssetPath("/projects/recruitment-system.png"),
   },
   {
     category: "E-Commerce",
