@@ -5,7 +5,7 @@ import AnimatedCard from "./AnimatedCard";
 
 const projects = [
   {
-    category: "AI/ML",
+    category: "MERN/DevOps/Cloud",
     title: "AI-Powered Recruitment Platform",
     description:
       "Full-stack recruitment platform with AI-driven CV analysis and job matching using React, Node.js, and Python microservices integrated with Google Gemini 2.0 AI. Containerized with Docker, implemented CI/CD pipeline using GitHub Actions, and deployed to cloud with Nginx and Let's Encrypt SSL.",
