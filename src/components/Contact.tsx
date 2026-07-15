@@ -27,15 +27,28 @@ const Contact = () => {
       return;
     }
 
+    // EmailJS configuration (set these in a .env file — see .env.example)
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      // No email service configured — fall back to the visitor's mail client.
+      const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`;
+      window.location.href = `mailto:madupadilshan111@gmail.com?subject=${encodeURIComponent(
+        formData.subject || "New Contact Form Message"
+      )}&body=${encodeURIComponent(body)}`;
+
+      toast({
+        title: "Opening your email app…",
+        description: "Please send the pre-filled message to reach me directly.",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
-      // EmailJS Configuration
-      // Replace these with your actual EmailJS credentials from https://www.emailjs.com/
-      const serviceId = "YOUR_SERVICE_ID"; // Replace with your service ID
-      const templateId = "YOUR_TEMPLATE_ID"; // Replace with your template ID
-      const publicKey = "YOUR_PUBLIC_KEY"; // Replace with your public key
-
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,

@@ -99,12 +99,6 @@ html {
   }
 }
 
-/* Smooth Scroll Behavior */
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
-}
-
 @layer base {
   * {
     @apply border-border;
@@ -215,84 +209,6 @@ html {
     }
     100% {
       transform: translateX(-50%);
-    }
-  }
-
-  /* Fade In animations */
-  .animate-fade-in {
-    animation: fadeIn 0.8s ease-out forwards;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  /* Slide In from Left */
-  .animate-slide-in-left {
-    animation: slideInLeft 0.6s ease-out forwards;
-  }
-
-  @keyframes slideInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  /* Slide In from Right */
-  .animate-slide-in-right {
-    animation: slideInRight 0.6s ease-out forwards;
-  }
-
-  @keyframes slideInRight {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  /* Scale In animation */
-  .animate-scale-in {
-    animation: scaleIn 0.5s ease-out forwards;
-  }
-
-  @keyframes scaleIn {
-    from {
-      opacity: 0;
-      transform: scale(0.9);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
-  /* Blur In animation */
-  .animate-blur-in {
-    animation: blurIn 0.8s ease-out forwards;
-  }
-
-  @keyframes blurIn {
-    from {
-      opacity: 0;
-      filter: blur(10px);
-    }
-    to {
-      opacity: 1;
-      filter: blur(0);
     }
   }
 }
