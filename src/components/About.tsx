@@ -1,28 +1,32 @@
-import { Download, Code2, Network, Cloud, Zap, Shield } from "lucide-react";
+import { Download, Workflow, Container, Cloud, Server, Network, Code2 } from "lucide-react";
 import { getAssetPath } from "@/lib/assets";
 import AnimatedCard from "./AnimatedCard";
 import { motion } from "framer-motion";
 
 const expertise = [
   {
-    icon: Code2,
-    text: "Crafting responsive user interfaces using the MERN Stack (MongoDB, Express.js, React, Node.js)",
+    icon: Workflow,
+    text: "Designing CI/CD pipelines with GitHub Actions and Jenkins to automate build, test, and deployment",
   },
   {
-    icon: Network,
-    text: "A strong understanding of networking principles that underpin web technologies",
+    icon: Container,
+    text: "Containerizing applications with Docker and deploying to AWS ECS Fargate",
+  },
+  {
+    icon: Server,
+    text: "Provisioning cloud infrastructure as code with Terraform (VPC, ECS, ECR, ALB)",
   },
   {
     icon: Cloud,
-    text: "Foundational knowledge in cloud computing, with exposure to Amazon Web Services (AWS)",
+    text: "Building and operating on AWS — EC2, ECS, ECR, S3, IAM, and core cloud services",
   },
   {
-    icon: Zap,
-    text: "Foundational knowledge in DevOps practices, including CI/CD pipelines for MERN applications",
+    icon: Network,
+    text: "Applying strong networking and security fundamentals (TCP/IP, firewalls, VPC design)",
   },
   {
-    icon: Shield,
-    text: "Implementing user authentication and authorization systems",
+    icon: Code2,
+    text: "Full-stack development with the MERN stack to build the applications I deploy",
   },
 ];
 
@@ -34,10 +38,11 @@ const About = () => {
 
         <div className="space-y-6 text-lg text-muted-foreground">
           <p className="leading-relaxed">
-            I am a motivated third-year Network Technology student at the University of
-            Sri Jayewardenepura, passionate about building modern web applications.
-            While my studies focus on Network Technology and Cybersecurity, I have over
-            a year of hands-on experience developing MERN-stack solutions.
+            I'm a Cloud & DevOps Engineer focused on automating the journey from code to
+            production. I design CI/CD pipelines, containerize applications with Docker,
+            and provision cloud infrastructure as code on AWS. Backed by a solid
+            foundation in networking, security, and full-stack (MERN) development, I build
+            systems that are reliable, scalable, and easy to ship.
           </p>
 
           {/* Expertise Grid */}
@@ -63,9 +68,9 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="leading-relaxed"
           >
-            I am actively seeking a challenging internship to apply my skills in both
-            web development and networking, and to gain valuable hands-on experience in
-            a professional environment.
+            I'm looking to take on Cloud and DevOps engineering challenges where I can
+            automate infrastructure, streamline delivery pipelines, and help teams ship
+            faster and more reliably.
           </motion.p>
 
           {/* CV Download Button */}

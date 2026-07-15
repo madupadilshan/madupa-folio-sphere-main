@@ -3,9 +3,9 @@ import Typewriter from "typewriter-effect";
 import { getAssetPath } from "@/lib/assets";
 
 const roles = [
-  "Cloud & DevOps Enthusiast",
-  "MERN-Stack Developer",
-  "Network Technologist",
+  "Cloud & DevOps Engineer",
+  "CI/CD & Automation Specialist",
+  "Infrastructure as Code with Terraform",
 ];
 
 const badges = [
@@ -154,8 +154,10 @@ const Hero = () => {
 
               {/* Description */}
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                A developer with foundational skills in MERN Stack and Networking, currently
-                advancing into DevOps, AWS, and Cybersecurity. Proven experience with CI/CD pipelines for MERN projects.
+                A Cloud & DevOps Engineer specializing in CI/CD automation,
+                containerization, and Infrastructure as Code on AWS. I build and ship
+                reliable, scalable systems with Docker, Terraform, Jenkins, and GitHub
+                Actions — backed by a strong networking and full-stack foundation.
               </p>
 
               {/* CTA Buttons */}

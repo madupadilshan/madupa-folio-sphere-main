@@ -1,46 +1,46 @@
-import { Shield, Code, Layers, Database, Wrench, Sparkles } from "lucide-react";
+import { Workflow, Container, Cloud, Server, Shield, Code } from "lucide-react";
 import AnimatedCard from "./AnimatedCard";
 
 const skillCategories = [
+  {
+    icon: Workflow,
+    title: "CI/CD & Automation",
+    skills: [
+      "GitHub Actions",
+      "Jenkins",
+      "Git & GitHub",
+      "Automated Build & Deploy",
+    ],
+  },
+  {
+    icon: Container,
+    title: "Containers & Registries",
+    skills: ["Docker", "Docker Compose", "Amazon ECR", "ECS Fargate"],
+  },
+  {
+    icon: Cloud,
+    title: "Cloud — AWS",
+    skills: ["EC2", "ECS", "ECR", "VPC", "S3", "IAM", "ALB"],
+  },
+  {
+    icon: Server,
+    title: "Infrastructure & OS",
+    skills: ["Terraform", "Linux", "Nginx", "Bash Scripting"],
+  },
   {
     icon: Shield,
     title: "Networking & Security",
     skills: [
       "TCP/IP Suite",
-      "Routing & Switching Concepts",
+      "Routing & Switching",
       "Firewall Configuration",
       "Cybersecurity Fundamentals",
     ],
   },
   {
     icon: Code,
-    title: "Programming Languages",
-    skills: ["HTML5", "CSS3/Sass", "JavaScript (ES6+)", "Python"],
-  },
-  {
-    icon: Layers,
-    title: "Frontend & Backend",
-    skills: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "RESTful APIs"],
-  },
-  {
-    icon: Database,
-    title: "Databases",
-    skills: ["MongoDB", "MySQL", "Firebase"],
-  },
-  {
-    icon: Wrench,
-    title: "Tools & DevOps",
-    skills: ["Git/GitHub", "Docker", "CI/CD Pipelines", "AWS Basics"],
-  },
-  {
-    icon: Sparkles,
-    title: "Other",
-    skills: [
-      "Responsive Design",
-      "Web Accessibility",
-      "Performance Optimization",
-      "Agile Methodologies",
-    ],
+    title: "Development",
+    skills: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "Python"],
   },
 ];
 

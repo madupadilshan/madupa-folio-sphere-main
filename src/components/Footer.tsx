@@ -14,12 +14,10 @@ const Footer = () => {
               <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 Madupa
               </h3>
-              <p className="text-muted-foreground">
-                Cloud &amp; DevOps Enthusiast · MERN-Stack Developer
-              </p>
+              <p className="text-muted-foreground">Cloud &amp; DevOps Engineer</p>
               <p className="text-sm text-muted-foreground">
-                Creating secure and scalable modern web applications with a focus on
-                performance and user experience.
+                Automating the path from code to production with CI/CD, Docker,
+                Terraform, and AWS cloud infrastructure.
               </p>
             </div>
 

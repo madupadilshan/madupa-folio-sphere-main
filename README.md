@@ -1,8 +1,8 @@
 # Madupa Dilshan — Portfolio
 
-A fast, responsive personal portfolio for **Madupa Dilshan** — Cloud & DevOps enthusiast,
-MERN-stack developer, and Network Technology student. Single-page site with animated
-sections, a certificate showcase, and a contact form.
+A fast, responsive personal portfolio for **Madupa Dilshan** — Cloud & DevOps Engineer
+specializing in CI/CD automation, Docker, Terraform, and AWS. Single-page site with
+animated sections, a certificate showcase, and a contact form.
 
 🌐 **Live:** [madupadilshan.live](https://madupadilshan.live/)
 
