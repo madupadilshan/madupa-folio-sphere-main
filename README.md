@@ -29,13 +29,13 @@ npm run dev
 
 ## Scripts
 
-| Command             | Description                       |
-| ------------------- | --------------------------------- |
-| `npm run dev`       | Start the Vite dev server         |
-| `npm run build`     | Production build to `dist/`       |
-| `npm run build:dev` | Development-mode build            |
-| `npm run preview`   | Preview the production build      |
-| `npm run lint`      | Run ESLint                        |
+| Command               | Description                  |
+| --------------------- | ---------------------------- |
+| `npm run dev`       | Start the Vite dev server    |
+| `npm run build`     | Production build to`dist/` |
+| `npm run build:dev` | Development-mode build       |
+| `npm run preview`   | Preview the production build |
+| `npm run lint`      | Run ESLint                   |
 
 ## Contact Form
 
@@ -47,8 +47,8 @@ edit `CONTACT_EMAIL` in `src/components/Contact.tsx`.
 
 All content is plain data arrays inside the section components — no CMS required:
 
-| Section      | File                              |
-| ------------ | --------------------------------- |
+| Section      | File                                |
+| ------------ | ----------------------------------- |
 | Hero / bio   | `src/components/Hero.tsx`         |
 | About        | `src/components/About.tsx`        |
 | Education    | `src/components/Education.tsx`    |

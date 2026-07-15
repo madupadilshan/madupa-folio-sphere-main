@@ -51,11 +51,13 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-container bg-secondary/30">
+    <section id="contact" className="section-container">
       <div className="max-w-6xl mx-auto">
-        <h2 className="section-heading">Get In Touch</h2>
+        <p className="eyebrow flex justify-center">Start a conversation</p>
+        <h2 className="section-heading">Let’s build something reliable</h2>
+        <p className="section-subtitle">Have a cloud, automation, or deployment challenge? Tell me what you’re building and where you need help.</p>
 
-        <div className="grid md:grid-cols-2 gap-12 mt-12">
+        <div className="grid md:grid-cols-[.85fr_1.15fr] gap-8 lg:gap-14 mt-10">
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
@@ -63,8 +65,7 @@ const Contact = () => {
                 Contact Information
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Feel free to reach out to me for any inquiries, collaboration
-                opportunities, or just to say hello!
+                I’m open to engineering opportunities, freelance projects, and thoughtful collaborations.
               </p>
             </div>
 
@@ -72,7 +73,7 @@ const Contact = () => {
               {/* Email */}
               <a
                 href="mailto:madupadilshan111@gmail.com"
-                className="card-portfolio flex items-center gap-4 hover:scale-[1.02] transition-transform"
+                className="card-portfolio flex items-center gap-4"
               >
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Mail className="w-6 h-6 text-primary" />
@@ -88,7 +89,7 @@ const Contact = () => {
               {/* Phone */}
               <a
                 href="tel:+94781396283"
-                className="card-portfolio flex items-center gap-4 hover:scale-[1.02] transition-transform"
+                className="card-portfolio flex items-center gap-4"
               >
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Phone className="w-6 h-6 text-primary" />
@@ -125,7 +126,7 @@ const Contact = () => {
                   aria-label="GitHub"
                   title="GitHub"
                 >
-                  <Github className="w-6 h-6 group-hover:scale-110 transition-transform" />
+                  <Github className="w-6 h-6" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/madupa-dilshan-3226711b1"
@@ -135,7 +136,7 @@ const Contact = () => {
                   aria-label="LinkedIn"
                   title="LinkedIn"
                 >
-                  <Linkedin className="w-6 h-6 group-hover:scale-110 transition-transform" />
+                  <Linkedin className="w-6 h-6" />
                 </a>
                 <a
                   href="https://twitter.com/MadupaDil"
@@ -145,7 +146,7 @@ const Contact = () => {
                   aria-label="Twitter"
                   title="Twitter"
                 >
-                  <Twitter className="w-6 h-6 group-hover:scale-110 transition-transform" />
+                  <Twitter className="w-6 h-6" />
                 </a>
               </div>
             </div>

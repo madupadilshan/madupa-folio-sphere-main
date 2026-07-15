@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -12,47 +11,43 @@ import BackToTop from "@/components/BackToTop";
 import ThemeToggle from "@/components/ThemeToggle";
 import PageTransition from "@/components/PageTransition";
 import SectionTransition from "@/components/SectionTransition";
-import LoadingScreen from "@/components/LoadingScreen";
 
 const Index = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
   return (
     <>
-      {isLoading && <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />}
       <PageTransition>
       <div className="min-h-screen">
         <Navbar />
 
-        <SectionTransition direction="fade">
+        <SectionTransition>
           <Hero />
         </SectionTransition>
 
-        <SectionTransition direction="up" delay={0.1}>
+        <SectionTransition>
           <About />
         </SectionTransition>
 
-        <SectionTransition direction="left" delay={0.2}>
+        <SectionTransition>
           <Education />
         </SectionTransition>
 
-        <SectionTransition direction="right" delay={0.1}>
+        <SectionTransition>
           <Skills />
         </SectionTransition>
 
-        <SectionTransition direction="up" delay={0.1}>
+        <SectionTransition>
           <Certificates />
         </SectionTransition>
 
-        <SectionTransition direction="scale" delay={0.1}>
+        <SectionTransition>
           <Projects />
         </SectionTransition>
 
-        <SectionTransition direction="up" delay={0.1}>
+        <SectionTransition>
           <Contact />
         </SectionTransition>
 
-        <SectionTransition direction="fade">
+        <SectionTransition>
           <Footer />
         </SectionTransition>
 

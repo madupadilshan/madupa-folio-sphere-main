@@ -112,14 +112,15 @@ const Certificates = () => {
   return (
     <section id="certificates" className="section-container bg-secondary/30">
       <div className="max-w-6xl mx-auto">
-        <h2 className="section-heading">Certificates & Badges</h2>
+        <p className="eyebrow flex justify-center">Continuous learning</p>
+        <h2 className="section-heading">Credentials &amp; recognition</h2>
         <p className="section-subtitle">My Professional Certifications</p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {visibleCerts.map((cert, index) => (
             <AnimatedCard
               key={`${cert.title}-${index}`}
-              delay={index * 0.1}
+              delay={index * 0.06}
               className="card-portfolio space-y-4 group overflow-hidden"
             >
               {/* Certificate Image */}
@@ -128,7 +129,7 @@ const Certificates = () => {
                   <img
                     src={cert.image}
                     alt={cert.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-90"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
 

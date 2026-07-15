@@ -76,24 +76,23 @@ const Projects = () => {
   return (
     <section id="projects" className="section-container">
       <div className="max-w-6xl mx-auto">
-        <h2 className="section-heading">Featured Projects</h2>
-        <p className="section-subtitle">
-          A showcase of my recent work and creative solutions
-        </p>
+        <p className="eyebrow flex justify-center">Selected work</p>
+        <h2 className="section-heading">Projects built to perform</h2>
+        <p className="section-subtitle">Selected systems where engineering, automation, and measurable product value come together.</p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {displayedProjects.map((project, index) => (
             <AnimatedCard
               key={index}
-              delay={index * 0.15}
-              className="card-portfolio space-y-4 group overflow-hidden"
+              delay={index * 0.06}
+              className={`card-portfolio space-y-4 group overflow-hidden flex flex-col ${index === 0 ? "md:col-span-2 lg:col-span-1" : ""}`}
             >
               {/* Project Image */}
               <div className="relative w-full h-48 -mx-6 -mt-6 mb-2 overflow-hidden rounded-t-xl">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
 
@@ -109,7 +108,7 @@ const Projects = () => {
               </h3>
 
               {/* Description */}
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed flex-1">
                 {project.description}
               </p>
 
@@ -126,7 +125,7 @@ const Projects = () => {
               </div>
 
               {/* Links */}
-              <div className="flex gap-4 pt-4">
+              <div className="flex gap-5 pt-4 border-t border-border/70">
                 {!project.hideLiveDemo && (
                   project.liveUrl ? (
                     <a

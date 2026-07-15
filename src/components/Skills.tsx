@@ -48,13 +48,15 @@ const Skills = () => {
   return (
     <section id="skills" className="section-container">
       <div className="max-w-6xl mx-auto">
-        <h2 className="section-heading">Technical Skills</h2>
+        <p className="eyebrow flex justify-center">Capabilities</p>
+        <h2 className="section-heading">A practical cloud toolkit</h2>
+        <p className="section-subtitle">Tools chosen to automate delivery, reduce operational friction, and keep infrastructure reproducible.</p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
             <AnimatedCard
               key={index}
-              delay={index * 0.1}
+              delay={index * 0.06}
               className="card-portfolio space-y-4"
             >
               <div className="flex items-center gap-3">

@@ -1,7 +1,6 @@
 import { Download, Workflow, Container, Cloud, Server, Network, Code2 } from "lucide-react";
 import { getAssetPath } from "@/lib/assets";
 import AnimatedCard from "./AnimatedCard";
-import { motion } from "framer-motion";
 
 const expertise = [
   {
@@ -34,7 +33,9 @@ const About = () => {
   return (
     <section id="about" className="section-container">
       <div className="max-w-5xl mx-auto">
-        <h2 className="section-heading">About Me</h2>
+        <p className="eyebrow flex justify-center">What I bring</p>
+        <h2 className="section-heading">Engineering beyond deployment</h2>
+        <p className="section-subtitle">I connect application development, infrastructure, and delivery into one dependable engineering workflow.</p>
 
         <div className="space-y-6 text-lg text-muted-foreground">
           <p className="leading-relaxed">
@@ -50,7 +51,7 @@ const About = () => {
             {expertise.map((item, index) => (
               <AnimatedCard
                 key={index}
-                delay={index * 0.1}
+                delay={index * 0.06}
                 className="card-portfolio flex gap-4 items-start"
               >
                 <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
@@ -61,26 +62,14 @@ const About = () => {
             ))}
           </div>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="leading-relaxed"
-          >
+          <p className="leading-relaxed">
             I'm looking to take on Cloud and DevOps engineering challenges where I can
             automate infrastructure, streamline delivery pipelines, and help teams ship
             faster and more reliably.
-          </motion.p>
+          </p>
 
           {/* CV Download Button */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex justify-center pt-4"
-          >
+          <div className="flex justify-center pt-4">
             <a
               href={getAssetPath("/Madupa_Dilshan_CV.pdf")}
               download="Madupa_Dilshan_CV.pdf"
@@ -89,7 +78,7 @@ const About = () => {
               <Download className="w-5 h-5" />
               Download My CV
             </a>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
