@@ -13,7 +13,6 @@ sections, a certificate showcase, and a contact form.
 - **Tailwind CSS** — styling with an HSL design-token system (see `src/index.css`)
 - **Framer Motion** — section and card animations
 - **Lucide React** — icons
-- **EmailJS** — contact-form delivery
 - Two [shadcn/ui](https://ui.shadcn.com/) primitives (`toast`, `toaster`) for notifications
 
 ## Getting Started
@@ -24,10 +23,7 @@ Requires **Node.js 18+** and npm.
 # 1. Install dependencies
 npm install
 
-# 2. (Optional) configure the contact form
-cp .env.example .env   # then fill in your EmailJS credentials
-
-# 3. Start the dev server (http://localhost:8080)
+# 2. Start the dev server (http://localhost:8080)
 npm run dev
 ```
 
@@ -41,21 +37,11 @@ npm run dev
 | `npm run preview`   | Preview the production build      |
 | `npm run lint`      | Run ESLint                        |
 
-## Contact Form (EmailJS)
+## Contact Form
 
-The contact form uses [EmailJS](https://www.emailjs.com/). If no credentials are set, it
-gracefully falls back to opening the visitor's email client with a pre-filled message, so
-the form always works. To send messages directly through EmailJS instead, create a free
-account and set these variables in a `.env` file (see `.env.example`):
-
-```
-VITE_EMAILJS_SERVICE_ID=your_service_id
-VITE_EMAILJS_TEMPLATE_ID=your_template_id
-VITE_EMAILJS_PUBLIC_KEY=your_public_key
-```
-
-The EmailJS template should expose `from_name`, `from_email`, `subject`, `message`, and
-`to_name` fields.
+The contact form needs no backend or configuration. On submit it opens the visitor's own
+email app with a pre-filled message addressed to the site owner. To change the recipient,
+edit `CONTACT_EMAIL` in `src/components/Contact.tsx`.
 
 ## Editing Content
 

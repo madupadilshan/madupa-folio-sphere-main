@@ -12,10 +12,9 @@ dist
 dist-ssr
 *.local
 
-# Environment variables (keep .env.example tracked)
+# Environment variables
 .env
 .env.*
-!.env.example
 
 # Editor directories and files
 .vscode/*

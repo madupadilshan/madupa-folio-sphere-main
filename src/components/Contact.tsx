@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Loader2 } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
-import emailjs from "@emailjs/browser";
 import AnimatedCard from "./AnimatedCard";
 import { motion } from "framer-motion";
+
+const CONTACT_EMAIL = "madupadilshan111@gmail.com";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,9 +13,8 @@ const Contact = () => {
     subject: "",
     message: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     // Basic validation
@@ -27,55 +27,18 @@ const Contact = () => {
       return;
     }
 
-    // EmailJS configuration (set these in a .env file — see .env.example)
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    // Open the visitor's email app with the message pre-filled.
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`;
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+      formData.subject || "New Contact Form Message"
+    )}&body=${encodeURIComponent(body)}`;
 
-    if (!serviceId || !templateId || !publicKey) {
-      // No email service configured — fall back to the visitor's mail client.
-      const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`;
-      window.location.href = `mailto:madupadilshan111@gmail.com?subject=${encodeURIComponent(
-        formData.subject || "New Contact Form Message"
-      )}&body=${encodeURIComponent(body)}`;
+    toast({
+      title: "Opening your email app…",
+      description: "Please send the pre-filled message to reach me directly.",
+    });
 
-      toast({
-        title: "Opening your email app…",
-        description: "Please send the pre-filled message to reach me directly.",
-      });
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    try {
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        subject: formData.subject || "New Contact Form Message",
-        message: formData.message,
-        to_name: "Madupa Dilshan",
-      };
-
-      await emailjs.send(serviceId, templateId, templateParams, publicKey);
-
-      toast({
-        title: "Message Sent Successfully! 🎉",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-      });
-
-      // Reset form
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch (error) {
-      console.error("Email send error:", error);
-      toast({
-        title: "Failed to Send Message",
-        description: "Please try again later or contact me directly via email.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
   const handleChange = (
@@ -268,20 +231,10 @@ const Contact = () => {
 
               <button
                 type="submit"
-                disabled={isSubmitting}
-                className="btn-hero-primary w-full inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="btn-hero-primary w-full inline-flex items-center justify-center gap-2"
               >
-                {isSubmitting ? (
-                  <>
-                    <Loader2 className="w-5 h-5 animate-spin" />
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    <Send className="w-5 h-5" />
-                    Send Message
-                  </>
-                )}
+                <Send className="w-5 h-5" />
+                Send Message
               </button>
             </form>
           </div>
